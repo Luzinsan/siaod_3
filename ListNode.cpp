@@ -6,10 +6,8 @@ namespace luzinsan
 	ListNode* ListNode::BeginList{nullptr}; 
 	ListNode*& ListNode::getBeginList() { return BeginList; }
 	ListNode*& ListNode::getNext() { return l_next; }
-	// инициализация списка - первого фиктивного элемента
 	ListNode::ListNode() : l_info{ 0 }, l_next{nullptr}{}
 	
-        // Вставка нового элемента списка после текущего, либо вставка первого элемента в начало
 	ListNode* ListNode::InsertNode(ListNode*& p, int i)
 	{
 		ListNode* q = new ListNode;
@@ -25,7 +23,6 @@ namespace luzinsan
 		return this;
 	}
 
-	// Удаление следующего элемента после текущего
 	int ListNode::DeleteNode(ListNode* p)
 	{
 		ListNode* q = p->l_next;
@@ -35,7 +32,6 @@ namespace luzinsan
 		return val;
 	}
 
-	// Печать элементов списка
 	ListNode* ListNode::PrintList(ListNode* p)
 	{
 		std::cout << "Список:\n";
