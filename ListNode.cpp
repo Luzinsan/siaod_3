@@ -6,16 +6,16 @@ namespace luzinsan
 	ListNode* ListNode::BeginList{nullptr}; 
 	ListNode*& ListNode::getBeginList() { return BeginList; }
 	ListNode*& ListNode::getNext() { return l_next; }
-	// инициализация списка - первого фиктивного элемента
+	// РёРЅРёС†РёР°Р»РёР·Р°С†РёСЏ СЃРїРёСЃРєР° - РїРµСЂРІРѕРіРѕ С„РёРєС‚РёРІРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р°
 	ListNode::ListNode() : l_info{ 0 }, l_next{nullptr}{}
 	
-    // Вставка нового элемента списка после текущего, либо вставка первого элемента в начало
+        // Р’СЃС‚Р°РІРєР° РЅРѕРІРѕРіРѕ СЌР»РµРјРµРЅС‚Р° СЃРїРёСЃРєР° РїРѕСЃР»Рµ С‚РµРєСѓС‰РµРіРѕ, Р»РёР±Рѕ РІСЃС‚Р°РІРєР° РїРµСЂРІРѕРіРѕ СЌР»РµРјРµРЅС‚Р° РІ РЅР°С‡Р°Р»Рѕ
 	ListNode* ListNode::InsertNode(ListNode*& p, int i)
 	{
 		ListNode* q = new ListNode;
-		assert(q && "Память не выделилась!!!");
+		assert(q && "РџР°РјСЏС‚СЊ РЅРµ РІС‹РґРµР»РёР»Р°СЃСЊ!!!");
 		q->l_info = i;
-		if (!p) // если список ещё не заполнен ни одним элементом
+		if (!p) // РµСЃР»Рё СЃРїРёСЃРѕРє РµС‰С‘ РЅРµ Р·Р°РїРѕР»РЅРµРЅ РЅРё РѕРґРЅРёРј СЌР»РµРјРµРЅС‚РѕРј
 			p = q;
 		else
 		{
@@ -25,7 +25,7 @@ namespace luzinsan
 		return this;
 	}
 
-	// Удаление следующего элемента после текущего
+	// РЈРґР°Р»РµРЅРёРµ СЃР»РµРґСѓСЋС‰РµРіРѕ СЌР»РµРјРµРЅС‚Р° РїРѕСЃР»Рµ С‚РµРєСѓС‰РµРіРѕ
 	int ListNode::DeleteNode(ListNode* p)
 	{
 		ListNode* q = p->l_next;
@@ -35,10 +35,10 @@ namespace luzinsan
 		return val;
 	}
 
-	// Печать элементов списка
+	// РџРµС‡Р°С‚СЊ СЌР»РµРјРµРЅС‚РѕРІ СЃРїРёСЃРєР°
 	ListNode* ListNode::PrintList(ListNode* p)
 	{
-		std::cout << "Список:\n";
+		std::cout << "РЎРїРёСЃРѕРє:\n";
 		do
 		{
 			std::cout << p->l_info << ' ';
