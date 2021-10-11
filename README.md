@@ -12,4 +12,5 @@
 */
 
 Результат работы программы
+
 ![image](https://user-images.githubusercontent.com/53607329/136817549-d96e496b-27fe-4b31-901e-39525106d5b4.png)
